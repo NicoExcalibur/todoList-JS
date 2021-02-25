@@ -1,67 +1,188 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <meta charset="UTF-8">	  <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>TodoList</title>
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/font-awesome.css" />
     <link rel="stylesheet" href="assets/css/bulma.css" />
-    
-</head>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  
+  <body>
+  
+    <div class="container">
+      <header class="header">
+        <div class="logo">
+          <a href=".">
+            <h1 class="logo__title title is-3">TodoList</h1>
+          </a>
+        </div>
+      </header>
 
-<body>
-
-  <div class="container">
-    <header class="header">
-      <div class="logo">
-        <a href=".">
-          <h1 class="logo__title title is-3">TodoList</h1>
-        </a>
-      </div>
-    </header>
-    
-    <main>
-      <div class="tasks">
-        <div class="task task--todo">
-          <div class="task__content">
-            <div class="task__name">
-              <p class="task__name-display">Acheter du pain</p>
-              <input class="task__name-edit input" type="text" value="Acheter du pain" placeholder="Nom de la tâche"
-                name="name" />
-            </div>
-            <div>
-              <button class="task__button task__button--modify button is-warning is-small">
-                <span>Editer</span>
-              </button>
-              <button class="task__button task__button--delete button is-danger is-small">
-                <span>Supprimer</span>
-              </button>
-            </div>
-          </div>
-        </div>      
+      <main>
         <div class="task task--add">
           <form method="POST">
             <div class="task__content">
               <div class="task__name">
                 <p class="task__name-display"></p>
-                <input class="task__name-edit input" type="text" placeholder="Nom de la tâche" name="name" />
-              </div>
-              <div class="task__category">
+                <input class="task__name-edit" type="text" placeholder="Nom de la tâche" name="name" />
               </div>
               <div class="task__buttons">
                 <button class="task__button task__button--add button is-info">
+                  <span class="icon is-small">
+                    <i class="fa fa-plus"></i>
+                  </span>
                   <span>Ajouter</span>
                 </button>
               </div>
             </div>
           </form>
         </div>
-      </div>
-    </main>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-</body>
 
-</html> 	
+        <div class="tasks">
+          <div class="task task--editable task--todo">
+            <div class="task__content">
+              <div class="task__name">
+                <p class="task__name-display">Acheter du pain</p>
+                <input class="task__name-edit input" type="text" value="Acheter du pain" placeholder="Nom de la tâche"
+                  name="name" />
+              </div>
+              <div class="task__buttons">
+                <button class="task__button task__button--incomplete button is-success is-small">
+                  <span class="icon is-small">
+                    <i class="fa fa-step-backward"></i>
+                  </span>
+                </button>
+                <button class="task__button task__button--validate button is-success is-small">
+                  <span class="icon is-small">
+                    <i class="fa fa-check-square-o"></i>
+                  </span>
+                </button>
+                <button class="task__button task__button--modify button is-warning is-small">
+                  <span class="icon is-small">
+                    <i class="fa fa-pencil-square-o"></i>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="task task--editable task--todo">
+            <div class="task__content">
+              <div class="task__name">
+                <p class="task__name-display">Réviser les objets en PHP</p>
+                <input class="task__name-edit input" type="text" value="Réviser les objets en PHP"
+                  placeholder="Nom de la tâche" name="name" />
+              </div>
+              <div class="task__buttons">
+                <button class="task__button task__button--incomplete button is-success is-small">
+                  <span class="icon is-small">
+                    <i class="fa fa-step-backward"></i>
+                  </span>
+                </button>
+                <button class="task__button task__button--validate button is-success is-small">
+                  <span class="icon is-small">
+                    <i class="fa fa-check-square-o"></i>
+                  </span>
+                </button>
+                <button class="task__button task__button--modify button is-warning is-small">
+                  <span class="icon is-small">
+                    <i class="fa fa-pencil-square-o"></i>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="task task--editable task--complete" data-category="Services">
+            <div class="task__content">
+              <div class="task__name">
+                <p class="task__name-display">Prendre rdv chez le coiffeur</p>
+                <input class="task__name-edit input" type="text" value="Prendre rdv chez le coiffeur"
+                  placeholder="Nom de la tâche" name="name" />
+              </div>
+              <div class="task__buttons">
+                <button class="task__button task__button--incomplete button is-success is-small">
+                  <span class="icon is-small">
+                    <i class="fa fa-step-backward"></i>
+                  </span>
+                </button>
+                <button class="task__button task__button--validate button is-success is-small">
+                  <span class="icon is-small">
+                    <i class="fa fa-check-square-o"></i>
+                  </span>
+                </button>
+                <button class="task__button task__button--modify button is-warning is-small">
+                  <span class="icon is-small">
+                    <i class="fa fa-pencil-square-o"></i>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="task task--editable task--edit">
+            <div class="task__content">
+              <div class="task__name">
+                <p class="task__name-display">Apprendre à apprend</p>
+                <input class="task__name-edit input" type="text" value="Apprendre à apprend" name="name" />
+              </div>
+              <div class="task__buttons">
+                <button class="task__button task__button--incomplete button is-success is-small">
+                  <span class="icon is-small">
+                    <i class="fa fa-step-backward"></i>
+                  </span>
+                </button>
+                <button class="task__button task__button--validate button is-success is-small">
+                  <span class="icon is-small">
+                    <i class="fa fa-check-square-o"></i>
+                  </span>
+                </button>
+                <button class="task__button task__button--modify button is-warning is-small">
+                  <span class="icon is-small">
+                    <i class="fa fa-pencil-square-o"></i>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <template id="task-template">
+            <div class="task task--editable task--todo" data-category="">
+              <div class="task__content">
+                <div class="task__name">
+                  <p class="task__name-display"></p>
+                  <input class="task__name-edit input" type="text" value="" placeholder="Nom de la tâche"
+                    name="name" />
+                </div>
+                <div class="task__category">
+                  <p></p>
+                </div>
+                <div class="task__buttons">
+                  <button class="task__button task__button--incomplete button is-success is-small">
+                    <span class="icon is-small">
+                      <i class="fa fa-step-backward"></i>
+                    </span>
+                  </button>
+                  <button class="task__button task__button--validate button is-success is-small">
+                    <span class="icon is-small">
+                      <i class="fa fa-check-square-o"></i>
+                    </span>
+                  </button>
+                  <button class="task__button task__button--modify button is-warning is-small">
+                    <span class="icon is-small">
+                      <i class="fa fa-pencil-square-o"></i>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </template>
+        </div>
+      </main>
+    </div>
+    <script src="assets/js/app.js"></script>
+  </body>
+  
+  </html> 

@@ -60,11 +60,6 @@ height: 0.4rem;
 background-color: #ededed;
 }
 
-.progress-bar__level {
-height: 0.4rem;
-background-color: #3298dc;
-}
-
 .task__button--desarchive,
 .task__button--incomplete,
 .task__button--delete {
@@ -211,7 +206,7 @@ font-size: 1rem;
 
     .task,
     .task__button.button,
-    .task__name-edit.input {
+    .task__name-edit {
         font-size: 1rem;
     }
 
